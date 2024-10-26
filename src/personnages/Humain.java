@@ -11,11 +11,33 @@ public class Humain {
 		this.argent = argent;
 	}
 	
-	public void direBonjour(String boisson) {
+	
+	
+	public String getBoisson() {
+		return boisson;
+	}
+
+
+
+	public void setBoisson(String boisson) {
+		this.boisson = boisson;
+	}
+
+
+
+	public int getArgent() {
+		return argent;
+	}
+	
+	public String getNom() {
+		return nom;
+	}
+	
+	public void direBonjour() {
 		System.out.println(parler() + "Bonjour ! Je m'appelle " + nom + " et j'aime boire du " + boisson);
 	}
 	
-	public void boire(String boisson) {
+	public void boire() {
 		System.out.println(parler()+"Mmmm, un bon verre de " + boisson + " ! GLOUPS !");
 	}
 	
@@ -40,7 +62,7 @@ public class Humain {
     	return argent;
     }
     
-    private String parler() {
+    protected String parler() {
     	return ("("+nom+")" + " - ");
     }
 }
